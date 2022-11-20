@@ -9,9 +9,10 @@
         html {
             height: 100%;
         }
-/*test*/
+
+        /*test*/
         .love {
-           /* background: url('https://s1.ax1x.com/2022/11/09/zSCSs0.jpg'); */
+            /* background: url('https://s1.ax1x.com/2022/11/09/zSCSs0.jpg'); */
             background: url('./image/our.jpeg');
             /* background-size:contain; */
             background-size: cover;
@@ -103,21 +104,63 @@
             width: 100%;
             font-weight: bold;
         }
+
+        .lett {
+            font-size: 14px;
+            color: #fff;
+            margin: 0 10px;
+            text-indent: 20px;
+        }
+
+        .lette {
+            height: 400px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 
 <body>
+    <audio controls="controls" autoplay="autoplay" id="bgMusic" style="display: none">
+        <source src="./music.mp3" type="audio/mpeg" />
+    </audio>
     <div class="love">
         <div class="cs">
             <!-- <img style="margin-right: 20px;" src="https://s1.ax1x.com/2022/09/06/v7bMoF.jpg" id="logo1">  -->
             <img style="margin-right: 20px;" src="./image/she.jpeg" id="logo1">
-           <!-- <img src="https://s1.ax1x.com/2022/11/09/zS94xI.jpg" id="logo1">  -->
-             <img src="./image/me.jpeg" id="logo1">
+            <!-- <img src="https://s1.ax1x.com/2022/11/09/zS94xI.jpg" id="logo1">  -->
+            <a href="tel:18632593813">
+                <img src="./image/me.jpeg" id="logo1" class="me">
+            </a>
         </div>
-        <div class="word">
+        <!-- <div class="word">
             <p>遇见你 真的很开心</p>
             <p style="font-size: 14px;">you are so cute!sweetie</p>
+        </div> -->
+        <div class="lette">
+            <div class="lett">
+                鑫
+            </div>
+            <div class="lett">
+                因为疫情，打破了我百天的计划，但没关系，因此有了我们的第一封电子情书，世界在变，但我们的爱不会变
+            </div>
+            <div class="lett">
+                从我们刚开始在一起就必须适应长时间的分隔两地，那时候我们有很长的时间再拉扯和争吵，甚至比吵架的时间还要多，后来我才慢慢明白，是因为相爱和在乎，我们才会有了争吵和不可开交
+            </div>
+            <div class="lett">
+                你之前问我什么是爱，但当时的我却给不出一个让我自己满意的答案，喜欢一个人可以是因为他的长相好看，可以是他的性格合适，但如果有一天这些东西都不在了，我可能就不会再喜欢她，但是爱是不管他长成什么样子，性格是什么，只要他站在我的面前，那就是答案，是我见过了他的好和不好之后，还会义无反顾的奔向他，还会在第一次见面的时候想他招手，和他表白，和他罗里吧嗦，把他计划在我的未来里，他不洗头，没有任何打扮，我也一样会心动，话句话说，他就站在那谁也比不了
+            </div>
+            <div class="lett">
+                爱情总会有热烈消退的那一天，但不是消失，只是以另一种方式出现了，人都会腻，只是有人选择继续想办，有人选择分道扬镳，你可以无数次向我确认我对你的爱意，但你一定要知道，再有你的选择里，我都选择你
+            </div>
+            <div class="lett">
+                一百天快乐，我爱你，李鑫鑫
+            </div>
+            <div class="lett" style="text-align:right">
+                李长庚<br />
+                2022.11.20
+            </div>
         </div>
+
         <p class="text" style="color: #ed3073;">
             💗💗<br />
             我们已经相爱了<br />
@@ -144,6 +187,19 @@
             span_dt_dt.innerHTML = daysold + " 天 " + hrsold + " 小时 " + minsold + " 分 " + seconds + " 秒 ";
         }
         show_date_time();
+    </script>
+    <script lang="javascript">
+        let audio = document.getElementById("bgMusic");
+        let flag = false
+        document.querySelector('img').onclick = function (e) {
+            if (flag) {
+                audio.pause();
+                flag = false
+            } else {
+                audio.play();
+                flag = true
+            }
+        }
     </script>
 </body>
 
